@@ -1,4 +1,4 @@
- //1 es piedra, 2  es papel, 3 es tijera
+        //1 es piedra, 2  es papel, 3 es tijera
 
         //Creando function
         function aleatorioPC(min, max) {
@@ -26,14 +26,16 @@
         let perdidas = 0;
 
         while (triunfos < 3 && perdidas < 3) {
-            pc = aleatorio(1, 3)
+            pc = aleatorioPC(1, 3)
 
-            jugador = prompt("Elige: 1 para piedra, 2 para papel, 3 para tijera");
+            jugador = prompt("Elige: 1 para piedra, 2 para papel, 3 para tijera")
             //alert("Elegiste " + jugador)
+
+            alert("PC elige: " + eleccion(pc))
 
             alert("Tu eliges: " + eleccion(jugador))
 
-            alert("PC elige: " + eleccion(pc))
+            
 
             //COMBATE
             if (pc == jugador) {
@@ -54,6 +56,5 @@
 
         }
 
-        alert("GANASTE " + triunfos + "veces. Perdiste " + perdidas + "veces.")
-
+        alert("GANASTE " + triunfos + " veces. Perdiste " + perdidas + " veces.")
 
